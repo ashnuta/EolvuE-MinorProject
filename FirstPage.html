@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Prediction</title>
+    <link rel="shortcut icon" href="../static/user.png" type="image/png">
+    <link rel="stylesheet" href="../static/firstPageStyle.css">
+    <style>
+        /* Additional CSS styles for the green tick mark and file name */
+        .file-upload-info {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Adjust the space between the file name and the green tick */
+            margin-top: 10px; /* Space below the upload button */
+        }
+
+        .file-name {
+            color: #333; /* Or any color that matches your design */
+        }
+
+        .file-upload-icon {
+            color: green;
+            font-size: 16px; /* Adjust size as needed */
+            visibility: hidden; /* Initially hide the green tick mark */
+        }
+
+        .file-upload-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Adjust the upload button style */
+        .file-upload-container label {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-right: 10px; /* Add space between the button and the tick mark */
+        }
+
+        /* Ensure the green tick mark is visible when a file is selected */
+        .file-upload-container.has-file .file-upload-icon {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    {% if reg %}
+    <script>alert("{{ reg }}")</script>
+    {% endif %}
+    <!-- Background gradient -->
+    <div class="background-gradient"></div>
+    <!-- Form container with enhanced design -->
+    <div class="form-container">
+        <h1>Personality Prediction</h1>
+        <form method="post" action="/prediction" enctype="multipart/form-data">
+            <div id="name" class="form-input">
+                <input placeholder='First Name' class='fname' name='firstname' type="text">
+                <input placeholder='Last Name' class='lname' name='lastname' type="text">
+            </div>
+            <div class="form-input">
+                <input class='email' name='email' type="email" placeholder="Email">
+            </div>
+            <div class="form-input">
+                <input class='age' name="age" type="number" step="1", min="18",max="60" placeholder="Age">
+            </div>
+            <div class="gender form-input">
+                <label for="male">
+                    <input id="male" type="radio" name='gender' value="male">
+                    <span>Male</span>
+                </label>
+                <label for="female">
+                    <input id="female" type="radio" name='gender' value="female">
+                    <span>Female</span>
+                </label>
+            </div>
+            <div class="file-upload form-input">
+                <div class="file-upload-container">
+                    <label for="resume">Upload Resume</label>
+                    <input id="resume" class='resume' name='resume' type="file" onchange="displayFileName()">
+                    <span class="file-upload-info" id="file-upload-info"></span>
+                </div>
+            </div>
+            <div class="question form-input">
+                <p>Give rating 1 to 10 to the following questions:</p>
+                <div class="rating">
+                    <p>Enjoy new experiences or things (openness)</p>
+                    <input class='ans' type="number" min="0" max="10" step="1" name="openness" placeholder="1-10">
+                </div>
+                <div class="rating">
+                    <p>How often do you feel negativity (neuroticism)</p>
+                    <input class='ans' type="number" min="0" max="10" step="1" name="neuroticism" placeholder="1-10">
+                </div>
+                <div class="rating">
+                    <p>Wishing to do one's work well and thoroughly (conscientiousness)</p>
+                    <input class='ans' type="number" min="0" max="10" step="1" name="conscientiousness" placeholder="1-10">
+                </div>
+                <div class="rating">
+                    <p>How much would you like to work with your peers (agreeableness)</p>
+                    <input class='ans' type="number" min="0" max="10" step="1" name="agreeableness" placeholder="1-10">
+                </div>
+                <div class="rating">
+                    <p>How outgoing and social interaction you like (extraversion)</p>
+                    <input class='ans' type="number" min="0" max="10" step="1" name="extraversion" placeholder="1-10">
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <!-- End of form container -->
+
+    <script>
+        function displayFileName() {
+            const input = document.getElementById('resume');
+            const info = document.getElementById('file-upload-info');
+            const container = document.querySelector('.file-upload-container');
+            if (input.files.length > 0) {
+                info.innerHTML = `<span class="file-name">${input.files[0].name}</span><span class="file-upload-icon">&#10003;</span>`;
+                container.classList.add('has-file');
+            } else {
+                info.innerHTML = '';
+                container.classList.remove('has-file');
+            }
+        }
+    </script>
+</body>
+
+</html>

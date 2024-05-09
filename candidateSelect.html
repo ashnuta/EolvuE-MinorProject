@@ -1,0 +1,319 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profiles</title>
+    <link rel="shortcut icon" href="../static/profile.png" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../static/candidateSelectStyle.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header__box" style="text-align: center;">
+            <h2> Technical Department </h2>
+            <p> Software Development Engineer </p>
+        </div>
+    </header>
+    <div class="body">
+        <div class="student2">
+            <h3 id="Name"></h3>
+            <div class="box1">
+                <div class="left">
+                    <p id="tochange">Not evaluated for this stage.</p>
+                    <a id="white" href={{ url_for('info') }}>Evaluate Now</a>
+                    <div class="comment" style="margin:5px;"></div>
+                </div>
+                
+                <div class="right__sidebar">
+                   
+                    <div class="icon">
+                        <button class='accepted' value="accept">
+                        <span class="material-icons">
+                            mail_outline
+                        </span>
+                    </button>
+                    </div>
+                    <div class="icon">
+                        <button class='rejected'><span class="material-icons">
+                            thumb_down_off_alt
+                        </span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="student2">
+            <h3>Jitendra Khatri</h3>
+            <div class="box1">
+
+                <div class="left">
+                    <p id="white">Not evaluated for this stage.</p>
+                    <a id="white" href="/">Evaluate Now</a>
+                    <div class="comment" style="margin:5px;"></div>
+                </div>
+                
+                <div class="right__sidebar">
+                   
+                    <div class="icon">
+                        <button class='accepted' value="accept">
+                        <span class="material-icons">
+                            mail_outline
+                        </span>
+                    </button>
+                    </div>
+                    <div class="icon">
+                        <button class='rejected'><span class="material-icons">
+                            thumb_down_off_alt
+                        </span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="student2">
+            <h3>Gaurav Rajput</h3>
+            <div class="box1">
+
+                <div class="left">
+                    <p id="white">Not evaluated for this stage.</p>
+                    <a id="white" href="/">Evaluate Now</a>
+                    <div class="comment" style="margin:5px;"></div>
+                </div>
+                
+                <div class="right__sidebar">
+                   
+                    <div class="icon">
+                        <button class='accepted' value="accept">
+                        <span class="material-icons">
+                            mail_outline
+                        </span>
+                    </button>
+                    </div>
+                    <div class="icon">
+                        <button class='rejected'><span class="material-icons">
+                            thumb_down_off_alt
+                        </span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="student2">
+            <h3>Akash Kumar Rana</h3>
+            <div class="box1">
+
+                <div class="left">
+                    <p id="white">Not evaluated for this stage.</p>
+                    <a id="white" href="/">Evaluate Now</a>
+                    <div class="comment" style="margin:5px;"></div>
+                </div>
+                
+                <div class="right__sidebar">
+                   
+                    <div class="icon">
+                        <button class='accepted' value="accept">
+                        <span class="material-icons">
+                            mail_outline
+                        </span>
+                    </button>
+                    </div>
+                    <div class="icon">
+                        <button class='rejected'><span class="material-icons">
+                            thumb_down_off_alt
+                        </span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+    
+    <script src="../static/candidateSelectscript.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profiles</title>
+    <link rel="shortcut icon" href="../static/profile.png" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../static/candidateSelectStyle.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header__box" style="text-align: center;">
+            <h2> Technical Department </h2>
+            <p> Software Development Engineer </p>
+        </div>
+    </header>
+    <div class="body">
+        <div class="student2">
+            <h3 id="Name">Mohit Makkar</h3> <!-- Dynamically fetched name, will be updated -->
+            <div class="box1">
+                <div class="left">
+                    <p id="tochange">Not evaluated for this stage.</p>
+                    <a id="white" href={{ url_for('info') }}>Evaluate Now</a>
+                    <div class="comment" style="margin:5px;"></div>
+                </div>
+                
+                <div class="right__sidebar">
+                   
+                    <div class="icon">
+                        <button class='accepted' value="accept">
+                        <span class="material-icons">
+                            mail_outline
+                        </span>
+                    </button>
+                    </div>
+                    <div class="icon">
+                        <button class='rejected'><span class="material-icons">
+                            thumb_down_off_alt
+                        </span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="student2">
+            <h3>Aditya Sharma</h3> <!-- Hardcoded name -->
+            <!-- Remaining hardcoded elements -->
+            <div class="box1">
+                <div class="left">
+                    <p id="white">Not evaluated for this stage.</p>
+                    <a id="white" href="/">Evaluate Now</a>
+                    <div class="comment" style="margin:5px;"></div>
+                </div>
+                
+                <div class="right__sidebar">
+                   
+                    <div class="icon">
+                        <button class='accepted' value="accept">
+                        <span class="material-icons">
+                            mail_outline
+                        </span>
+                    </button>
+                    </div>
+                    <div class="icon">
+                        <button class='rejected'><span class="material-icons">
+                            thumb_down_off_alt
+                        </span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Repeat similar structure for other hardcoded names -->
+    <div class="body">
+        <div class="student2">
+            <h3>Saurav Oberoi</h3> <!-- Hardcoded name -->
+            <!-- Remaining hardcoded elements -->
+            <div class="box1">
+                <div class="left">
+                    <p id="white">Not evaluated for this stage.</p>
+                    <a id="white" href="/">Evaluate Now</a>
+                    <div class="comment" style="margin:5px;"></div>
+                </div>
+                
+                <div class="right__sidebar">
+                   
+                    <div class="icon">
+                        <button class='accepted' value="accept">
+                        <span class="material-icons">
+                            mail_outline
+                        </span>
+                    </button>
+                    </div>
+                    <div class="icon">
+                        <button class='rejected'><span class="material-icons">
+                            thumb_down_off_alt
+                        </span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="student2">
+            <h3>Karan Singh</h3> <!-- Hardcoded name -->
+            <!-- Remaining hardcoded elements -->
+            <div class="box1">
+                <div class="left">
+                    <p id="white">Not evaluated for this stage.</p>
+                    <a id="white" href="/">Evaluate Now</a>
+                    <div class="comment" style="margin:5px;"></div>
+                </div>
+                
+                <div class="right__sidebar">
+                   
+                    <div class="icon">
+                        <button class='accepted' value="accept">
+                        <span class="material-icons">
+                            mail_outline
+                        </span>
+                    </button>
+                    </div>
+                    <div class="icon">
+                        <button class='rejected'><span class="material-icons">
+                            thumb_down_off_alt
+                        </span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+    
+    <script>
+        // Function to fetch data from result.json and update the first name element
+        function fetchData() {
+            fetch("/static/result.json") // Assuming 'static' is a directory in the root of your server
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const firstName = data.Name; // Assuming the JSON structure has a 'Name' field
+                    document.getElementById("Name").innerText = firstName;
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                    document.getElementById("Name").innerText = 'Default Name'; // In case of error, set a default name
+                });
+        }
+
+        // Call the fetchData function when the page loads
+        window.onload = fetchData;
+    </script>
+    <script src="../static/candidateSelectscript.js"></script>
+</body>
+
+</html>
